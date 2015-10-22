@@ -1,0 +1,126 @@
+
+//
+// Footer
+// --------------------------------------------------
+
+.footer {
+  background: @brand-dark url('../img/bg-footer.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  padding: 40px 0 80px;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.brand--in-footer {
+  float: none;
+  display: block;
+  margin: 0 0 20px;
+}
+
+.nav-footer {
+
+  > li {
+
+    > a {
+      color: fade(#fff, 30%);
+      background: none;
+
+      &:hover,
+      &:focus {
+        background: none;
+        color: @link-hover-color;
+      }
+    }
+
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus {
+      text-decoration: none;
+      color: @link-color;
+    }
+  }
+}
+
+.social {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  .clearfix();
+
+  > li {
+    margin: 0;
+    float: left;
+
+    > a {
+      display: block;
+      text-decoration: none;
+      margin-left: 10px;
+      font-size: 30px;
+      .transition(all .1s ease-in-out);
+
+      &:hover {
+        .scale(1.1);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    float: none;
+
+    > li > a {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+}
+
+.nav-menu-header {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    margin: 0;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+//
+// Back to top button
+// --------------------------------------------------
+
+.back-to-top {
+	float: right;
+	display: block;
+	width: 30px;
+	height: 30px;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	background: #ccc;
+}

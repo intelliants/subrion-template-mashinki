@@ -1,0 +1,41 @@
+
+.sponsored-cars {
+  background: #f2f2f2;
+  padding: 40px 0;
+  position: relative;
+
+  &__list {
+    height: 0;
+    overflow: hidden;
+    // .transition(height .2s ease);
+
+    &.owl-loaded {
+      height: auto;
+      overflow: visible;
+    }
+
+    &__item {
+      padding: 2px;
+    }
+  }
+
+  .owl-nav {
+    position: absolute;
+    right: 0;
+    top: -74px;
+    margin: 0;
+
+    .owl-prev,
+    .owl-next {
+      margin: 4px;
+      width: 26px;
+      height: 26px;
+      line-height: 16px;
+      background: fade(@brand-dark, 20%);
+
+      &:hover {
+        background: fade(@brand-dark, 40%);        
+      }
+    }
+  }
+}

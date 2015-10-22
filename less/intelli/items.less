@@ -1,0 +1,540 @@
+
+//
+// Local vars
+// --------------------------------------------------
+
+@gap:                   15px;
+@item-link-color:       @text-color;
+@item-link-color-hover: lighten(@item-link-color, 10%);
+
+
+
+//
+// Items
+// --------------------------------------------------
+
+.ia-sorting {
+  .clearfix();
+  margin-bottom: @gap;
+}
+
+.alpha-sorting {
+
+  a {
+    width: 40px;
+    margin: 0 0 3px 0;
+  }
+}
+
+// lists
+.ia-items { 
+
+}
+
+.ia-items--cards {
+  
+}
+
+
+
+//
+// Single item
+// --------------------------------------------------
+
+.ia-item {
+  .clearfix();
+  position: relative;
+
+  + .ia-item {
+    margin-top: @gap+@gap;
+  }
+
+  a:not(.btn),
+  a:not(.btn):focus {
+    color: @item-link-color;
+
+    &:hover {
+      color: @item-link-color-hover;
+    }
+  }
+
+  &--border {
+    border: 1px solid @border-color;
+    padding: @gap;
+  }
+
+  &--featured {
+    border: 1px solid @brand-info;
+    padding: @gap;
+  }
+
+  &--sponsored {
+    border: 1px solid @brand-warning;
+    padding: @gap;
+  }
+
+  &__image {
+    position: relative;
+    text-align: center;
+    margin-bottom: @gap;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    img {
+      .img-responsive();
+      margin: 0 auto;
+    }
+
+    @media (min-width: @screen-phone) {
+      text-align: left;
+      float: left;
+      margin-bottom: 0;
+      margin-right: @gap;
+      max-width: 100px;  
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+      max-width: 150px;
+    }
+
+    &__badge {
+      color: #fff;
+      font-size: 12px;
+      display: block;
+      background: #222;
+      padding: 3px 6px;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+    }
+  }
+
+  &__labels {
+    position: absolute;
+    left: 15px;
+    bottom: 100%;
+    margin-bottom: -6px;
+
+    .label {
+
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    &__info {
+      float: right;
+      margin-left: @gap;
+      color: fade(@text-color, 50%);
+    }
+  }
+
+  &__actions {
+    float: right;
+
+    a {
+      margin-left: @gap;
+    }
+  }
+
+  &__title {
+    .font-normalize(18px, 0 0 @gap);
+    font-weight: normal;
+  }
+
+  &__additional {
+    .clearfix();
+
+    p {
+      float: left;
+      color: fade(@text-color, 50%);
+      margin: 0 @gap @gap 0;
+
+      a:not(.btn) {
+        color: fade(@text-color, 50%);
+
+        &:hover {
+          color: fade(@text-color, 70%);
+        }
+      }
+
+      @media (min-width: @grid-float-breakpoint) {
+        margin: 0 @gap+@gap @gap 0;
+      }
+    }
+
+    &__icon {
+      display: inline-block;
+      border: 2px solid fade(@text-color, 30%);
+      width: 34px;
+      height: 34px;
+      line-height: 30px;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 50%;
+
+      &:hover {
+        border-color: fade(@text-color, 70%);
+      }
+    }
+  }
+
+  &__table {
+
+    >thead>tr>th, 
+    >tbody>tr>th, 
+    >tfoot>tr>th, 
+    >thead>tr>td, 
+    >tbody>tr>td, 
+    >tfoot>tr>td {
+      border-top: none;
+      padding: 0 8px 8px 0;
+
+      &:first-child {
+        color: fade(@text-color, 50%);
+        width: 18%;
+      }
+    }
+  }
+}
+
+// as card
+
+.ia-item--card {
+  .ia-item__image {
+    float: none;
+    display: block;
+
+    @media (min-width: @screen-phone) {
+      max-width: 100%;
+      margin: 0 0 @gap;
+
+      img {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+      max-width: 100%;
+    }
+  }
+
+  .ia-item__content {
+
+  }
+}
+
+
+
+//
+// Cards
+// --------------------------------------------------
+
+.b-car-card {
+  background: #fff;
+  .box-shadow(0 1px 2px rgba(0,0,0,.2));
+  max-width: 270px;
+
+  &__img {
+    position: relative;
+    height: 170px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 270px !important;
+      max-width: none;
+      height: 270px;
+      top: 50%;
+      left: 50%;
+      margin-top: -135px;
+      margin-left: -135px;
+      .transition(all .1s ease-in-out);
+    }
+    
+    h4 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      margin: 0;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 16px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__body {
+    padding: 20px;
+  }
+
+  &__info {
+    border-top: 1px solid #eee;
+    padding: 20px;
+    .clearfix();
+
+    &__price {
+      float: left;
+      color: @brand-success;
+    }
+
+    a {
+      float: right;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+  &:hover {
+
+    .b-car-card__img img {
+      .scale(1.1);
+    }
+  }
+}
+
+.b-car-card-alt {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: -60px;
+    z-index: 1;
+    text-decoration: none;
+  }
+
+  &__info {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+    padding: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    .transition(all .2s ease);
+
+    &:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    a {
+      color: #fff;
+    }
+
+    &__price {
+      color: @brand-success;
+      font-weight: bold;
+    }
+  }
+}
+
+
+//
+// Cars list
+// --------------------------------------------------
+
+.b-car {
+  .clearfix();
+  background: #f2f2f2;
+  margin-bottom: 20px;
+  position: relative;
+  .box-sizing(border-box);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    float: left;
+    width: 150px;
+    position: relative;
+
+    &--no-preview {
+      background: #ddd;
+    }
+
+    &__badge {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      background: #333;
+      color: #fff;
+      padding: 2px 5px;
+    }
+  }
+
+  &__labels {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+  }
+
+  &__actions {
+    float: right;
+  }
+
+  &__body {
+    overflow: hidden;
+    padding: 20px;
+
+    &__price {
+      float: right;
+      font-size: 20px;
+      line-height: 20px;
+      color: @brand-success;
+      margin-left: 15px;
+    }
+
+    &__sinfo {
+      float: right;
+      line-height: 20px;
+      font-size: 12px;
+      color: #bbb;
+      margin-left: 15px;
+
+      span {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+
+    h3 {
+      margin: 0 0 20px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    &__spec {
+      width: 80%;
+      color: lighten(@text-color, 13%);
+
+      td.second-column {
+        padding-left: 40px;
+      }
+
+      td {
+        padding-right: 6px;
+      }
+
+    }
+  }
+
+  &--approval,
+  &--sold {
+
+    .b-car__img,
+    .b-car__body {
+      .opacity(50);
+    }
+
+    &:hover {
+      .b-car__img,
+      .b-car__body {
+        .opacity(100);
+      }
+    }
+  }
+
+  &--featured {
+    background: #E9F1FF;
+  }
+
+  &--sponsored {
+    background: #FFEFC7;
+  }
+}
+
+
+//
+// Categories and lists
+// --------------------------------------------------
+
+.ia-categories--makes {
+
+  .row-fluid [class*="span"] {
+    min-height: 20px;
+  }
+
+  .cat-wrap {
+    padding: 0;
+  }
+}
+
+.ia-sorting {
+  .clearfix();
+  margin-bottom: 10px;
+
+  &__total {
+    float: left;
+  }
+
+  &__item {
+    float: right;
+    position: relative;
+    margin-left: 16px;
+
+    .dropdown-toggle {
+      text-decoration: none;
+      color: #999;
+    }
+  }
+  
+  .caret {
+    vertical-align: middle;
+    border-top-color: #999;
+  }
+
+  .dropdown-menu {
+    margin-top: 4px;
+
+    i {
+      float: right;
+      margin-top: 3px;
+    }
+  }
+}
+
+
+
+//
+// Item view page
+// --------------------------------------------------
+
+.ia-item--view {
+
+  .ia-item__image {
+
+    @media (min-width: @screen-phone) {
+      margin-right: @gap+@gap;
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+      max-width: 200px;
+    }
+  }
+
+  + .tabbable {
+    margin-top: @gap;
+  }
+}
