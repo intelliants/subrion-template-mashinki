@@ -49,24 +49,30 @@
 		    type="divider" 
 		    order="3000">General</config>
 
-	<config group="template_kickstart" 
+	<config group="template_mashinki"
+		    name="enable_text_logo" 
+		    type="radio"
+		    order="3001" 
+		    values="1,0" 
+		    description="Enable Logo text">0</config>
+
+	<config group="template_mashinki" 
 		    name="website_bg" 
 		    type="image" 
 		    description="Header background"
-		    order="3001"><![CDATA[]]></config>
+		    order="3002"><![CDATA[]]></config>
+
+	<config group="template_mashinki" 
+		    name="website_footer_bg" 
+		    type="image" 
+		    description="Footer background"
+		    order="3003"><![CDATA[]]></config>
 
 	<config group="template_mashinki" 
 		    name="max_top_menu_items" 
 		    type="text" 
 		    description="Max number of items in Main Menu"
-		    order="3002">8</config>
-
-	<config group="template_mashinki"
-		    name="enable_text_logo" 
-		    type="radio"
-		    order="3005" 
-		    values="1,0" 
-		    description="Enable Logo text">0</config>
+		    order="3004">8</config>
 
 	<config group="template_mashinki" 
 		    name="mashinki_divider2" 
@@ -118,7 +124,7 @@
 		<block position="verytop" sticky="1" header="0" collapsible="0" status="active" order="-1">autos_search</block>
 		<block position="right" header="0" pages="index,autos_index" status="active" order="-1">auto_featured</block>
 		<block position="verytop" header="0" status="active" sticky="0" pages="index">auto_sponsored</block>
-		<block position="bottom" collapsible="0" header="0" classname="box--border" status="active" order="-1">auto_recent</block>
+		<block position="bottom" collapsible="0" header="0" status="active" order="-1">auto_recent</block>
 		<block position="bottom" collapsible="0" header="0" classname="box--border" status="active" order="-1">auto_random</block>
 		<block status="inactive">common_statistics</block>
 		<block position="right" order="2" status="active">auto_body_list</block>
@@ -157,5 +163,10 @@
 		<phrase category="frontend" key="car_features">Car features</phrase>
 		<phrase category="frontend" key="contact_seller">Contact seller</phrase>
 		<phrase category="frontend" key="added_on">Added on</phrase>
+		<phrase category="frontend" key="sponsored_for_sale">
+			<![CDATA[
+<span>Sponsored</span> cars for sale
+			]]>
+		</phrase>
 	</phrases>
 </template>

@@ -5,24 +5,24 @@
 				<div class="b-search__controls__item b-search__controls__item--selects">
 					<div class="b-selects">
 						<div class="b-selects__item">
-							<select name="auto_type" id="as_condition">
-								<option value="">{lang key='field_auto_type'}</option>
-								<option value="new"{if isset($smarty.get.auto_type) && 'new' == $smarty.get.auto_type} selected{/if}>{lang key='mashinki_new'}</option>
-								<option value="used"{if isset($smarty.get.auto_type) && 'used' == $smarty.get.auto_type} selected{/if}>{lang key='mashinki_used'}</option>
+							<select name="condition" id="as_condition">
+								<option value="">{lang key='field_condition'}</option>
+								<option value="new"{if isset($smarty.get.condition) && 'new' == $smarty.get.condition} selected{/if}>{lang key='mashinki_new'}</option>
+								<option value="used"{if isset($smarty.get.condition) && 'used' == $smarty.get.condition} selected{/if}>{lang key='mashinki_used'}</option>
 							</select>
 						</div>
 						<div class="b-selects__item">
-							<select class="js-car-make">
-								<option value="0">{lang key='make'}</option>
+							<select class="js-car-make" name="mk">
+								<option value="">{lang key='make'}</option>
 								{foreach $car_blocks_data.search.categories as $item}
-									<option value="{$item.id}"{if isset($smarty.get.fmid) && $smarty.get.fmid == $item.id} selected{/if}>{$item.name}</option>
+									<option value="{$item.id}"{if isset($smarty.get.mk) && $smarty.get.mk == $item.id} selected{/if}>{$item.name|escape:'html'}</option>
 								{/foreach}
 							</select>
 						</div>
 						<div class="b-selects__item">
 							<div class="b-selects__item__loader"><div class="loader"></div></div>
-							<select class="js-car-model" disabled>
-								<option value="0">{lang key='model'}</option>
+							<select class="js-car-model" name="md" data-spinner=".b-selects__item__loader">
+								<option value="">{lang key='model'}</option>
 							</select>
 						</div>
 					</div>
@@ -33,21 +33,19 @@
 						data-type="double" 
 						data-min="0" 
 						data-max="{if $max_auto_price}{$max_auto_price}{else}150000{/if}" 
-						data-from="{if isset($smarty.get.price_from)}{$smarty.get.price_from}{else}5000{/if}" 
-						data-to="{if isset($smarty.get.price_to)}{$smarty.get.price_to}{elseif $max_auto_price}{$max_auto_price}{else}40000{/if}"
+						data-from="{if isset($smarty.get.price[f])}{$smarty.get.price[f]}{else}5000{/if}" 
+						data-to="{if isset($smarty.get.price[t])}{$smarty.get.price[t]}{elseif $max_auto_price}{$max_auto_price}{else}40000{/if}"
 						data-step="1000">
 
-					<input type="hidden" id="used-price_from" name="price_from" value="{if isset($smarty.get.price_from)}{$smarty.get.price_from}{else}0{/if}">
-					<input type="hidden" id="used-price_to" name="price_to" value="{if isset($smarty.get.price_to)}{$smarty.get.price_to}{elseif $max_auto_price}{$max_auto_price}{else}150000{/if}">
+					<input type="hidden" id="used-price_from" name="price[f]" value="{if isset($smarty.get.price[f])}{$smarty.get.price[f]}{else}0{/if}">
+					<input type="hidden" id="used-price_to" name="price[t]" value="{if isset($smarty.get.price[t])}{$smarty.get.price[t]}{elseif $max_auto_price}{$max_auto_price}{else}150000{/if}">
 				</div>
 				<div class="b-search__controls__item b-search__controls__item--actions">
 					<button type="submit" class="btn btn-primary btn-block">{lang key='search'}</button>
 				</div>
 			</div>
 		</div>
-
-		<input type="hidden" name="fmid" value="{if isset($smarty.get.fmid)}{$smarty.get.fmid|intval}{else}0{/if}">
-		<input type="hidden" name="mid" value="{if isset($smarty.get.mid)}{$smarty.get.mid|intval}{else}0{/if}">
 	</form>
 	{ia_add_media files='js:_IA_TPL_ion.rangeSlider.min'}
+	{ia_print_js files='_IA_URL_packages/autos/js/front/search'}
 {/if}

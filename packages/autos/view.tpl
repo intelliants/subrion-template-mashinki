@@ -6,7 +6,7 @@
 		<span class="ia-item-view__info__item">{lang key='field_auto_type'}: <a href="{$packages.autos.url}condition/{$item.auto_type}/"><b>{lang key="field_auto_type_{$item.auto_type}"}</b></a></span>
 		{if $item.mileage}<span class="ia-item-view__info__item">{lang key='field_mileage'}: <b>{$item.mileage}</b></span>{/if}
 		<span class="ia-item-view__info__item"><span class="fa fa-eye"></span> {$item.views_num}</b></span>
-		<span class="ia-item-view__info__item"><span class="fa fa-calendar"></span> {lang key='added_on'} {$item.date_added|date_format:$config.date_format}</b></span>
+		<span class="ia-item-view__info__item"><span class="fa fa-calendar"></span> {lang key='added_on'} {$item.date_added|date_format:$core.config.date_format}</b></span>
 	</div>
 
 	{if !empty($item.auto_pictures)}

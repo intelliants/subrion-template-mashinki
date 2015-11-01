@@ -19,9 +19,9 @@
 	</div>
 
 	<div class="b-car__body">
-		<div class="b-car__body__price">{$config.currency} {$listing.price}</div>
+		<div class="b-car__body__price">{$core.config.currency} {$listing.price}</div>
 		<div class="b-car__body__sinfo">
-			<span><span class="fa fa-clock"></span> {$listing.date_added|date_format:$config.date_format}</span>
+			<span><span class="fa fa-clock"></span> {$listing.date_added|date_format:$core.config.date_format}</span>
 			<span><span class="fa fa-eye"></span> {$listing.views_num}</span>
 		</div>
 		<h3><a href="{ia_url item='autos' type='url' data=$listing}">{$listing.model}, {$listing.release_year}</a></h3>
@@ -34,14 +34,14 @@
 		<table class="b-car__body__spec">
 			<tbody>
 				<tr>
-					<td>{lang key='field_auto_type'}:</td>
-					<td><b><a href="{$packages.autos.url}condition/{$listing.auto_type}/">{lang key="field_auto_type_{$listing.auto_type}"}</a></b></td>
+					<td>{lang key='field_condition'}:</td>
+					<td><b><a href="{ia_url item='autos' data=$listing type='url'}">{lang key="field_auto_type_{$listing.condition}"}</a></b></td>
 					<td class="second-column">{lang key='field_transmission'}:</td>
 					<td><b>{lang key="field_transmission_{$listing.transmission}"}</b></td>
 				</tr>
 				<tr>
 					<td>{lang key='field_body_type'}:</td>
-					<td><b><a href="{$packages.autos.url}body-style/{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</b></a></td>
+					<td><b><a href="{ia_url item='autos' data=$listing type='url'}">{lang key="field_body_type_{$listing.body_type}"}</b></a></td>
 					<td class="second-column">{lang key='field_drive_type'}:</td>
 					<td><b>{lang key="field_drive_type_{$listing.drive_type}"}</b></td>
 				</tr>

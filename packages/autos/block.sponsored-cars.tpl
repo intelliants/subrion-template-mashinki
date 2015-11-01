@@ -2,7 +2,7 @@
 	<div class="sponsored-cars">
 		<div class="container">
 			<div class="section-header">
-				<h2><span>Sponsored</span> cars for sale</h2>
+				<h2>{lang key='sponsored_for_sale'}</h2>
 			</div>
 
 			<div class="sponsored-cars__list">
@@ -16,7 +16,7 @@
 								<h4><a href="{$item.link}">{$item.model}, {$item.release_year}</a></h4>
 							</div>
 							<div class="b-car-card__body">
-								<a href="{$packages.autos.url}body-style/{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a><br>
+								<a href="{$smarty.const.IA_URL}search/cars/body:{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a><br>
 								{lang key="field_exterior_color_{$item.exterior_color}"}<br>
 								{lang key="field_transmission_{$item.transmission}"} {lang key='field_transmission'}<br>
 								{lang key="field_drive_type_{$item.drive_type}"}

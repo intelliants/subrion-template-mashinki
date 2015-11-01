@@ -175,12 +175,12 @@
 						{ia_blocks block='footer_menu2'}
 					</div>
 					<div class="col-md-5">
-						{if $config.mashinki_social}
+						{if $core.config.mashinki_social}
 							<ul class="social">
-								{if $config.mashinki_social_t}<li><a href="{$config.mashinki_social_t}" class="twitter"><span class="fa fa-twitter-square"></span></a></li>{/if}
-								{if $config.mashinki_social_f}<li><a href="{$config.mashinki_social_f}" class="facebook"><span class="fa fa-facebook-square"></span></a></li>{/if}
-								{if $config.mashinki_social_g}<li><a href="{$config.mashinki_social_g}" class="google-plus"><span class="fa fa-google-plus-square"></span></a></li>{/if}
-								{if $config.mashinki_social_i}<li><a href="{$config.mashinki_social_i}" class="linkedin"><span class="fa fa-linkedin-square"></span></a></li>{/if}
+								{if $core.config.mashinki_social_t}<li><a href="{$core.config.mashinki_social_t}" class="twitter"><span class="fa fa-twitter-square"></span></a></li>{/if}
+								{if $core.config.mashinki_social_f}<li><a href="{$core.config.mashinki_social_f}" class="facebook"><span class="fa fa-facebook-square"></span></a></li>{/if}
+								{if $core.config.mashinki_social_g}<li><a href="{$core.config.mashinki_social_g}" class="google-plus"><span class="fa fa-google-plus-square"></span></a></li>{/if}
+								{if $core.config.mashinki_social_i}<li><a href="{$core.config.mashinki_social_i}" class="linkedin"><span class="fa fa-linkedin-square"></span></a></li>{/if}
 							</ul>
 						{/if}
 					</div>

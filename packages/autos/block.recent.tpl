@@ -21,7 +21,7 @@
 				<div class="b-car__body">
 					<div class="b-car__body__price">{$item.price}</div>
 					<div class="b-car__body__sinfo">
-						<span><span class="fa fa-clock"></span> {$item.date_added|date_format:$config.date_format}</span>
+						<span><span class="fa fa-clock"></span> {$item.date_added|date_format:$core.config.date_format}</span>
 						<span><span class="fa fa-eye"></span> {$item.views_num}</span>
 					</div>
 					<h3><a href="{$item.link}">{$item.model}, {$item.release_year}</a></h3>
@@ -29,14 +29,14 @@
 					<table class="b-car__body__spec">
 						<tbody>
 							<tr>
-								<td>{lang key='field_auto_type'}:</td>
-								<td><b><a href="{$packages.autos.url}condition/{$item.auto_type}/">{lang key="field_auto_type_{$item.auto_type}"}</a></b></td>
+								<td>{lang key='field_condition'}:</td>
+								<td><b><a href="{$smarty.const.IA_URL}search/cars/condition:{$item.condition}/">{lang key="field_condition_{$item.condition}"}</a></b></td>
 								<td class="second-column">{lang key='field_transmission'}:</td>
 								<td><b>{lang key="field_transmission_{$item.transmission}"}</b></td>
 							</tr>
 							<tr>
 								<td>{lang key='field_body_type'}:</td>
-								<td><b><a href="{$packages.autos.url}body-style/{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a></b></td>
+								<td><b><a href="{$smarty.const.IA_URL}search/cars/body:{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a></b></td>
 								<td class="second-column">{lang key='field_drive_type'}:</td>
 								<td><b>{lang key="field_drive_type_{$item.drive_type}"}</b></td>
 							</tr>

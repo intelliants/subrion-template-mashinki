@@ -12,7 +12,7 @@
 					</h4>
 					<p><span class="label label-info">{$item.price}</span></p>
 					<p class="text-fade-50">
-						<a href="{$packages.autos.url}body-style/{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a>, 
+						<a href="{$smarty.const.IA_URL}search/cars/body:{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a>, 
 						{lang key="field_exterior_color_{$item.exterior_color}"}, 
 						{lang key="field_transmission_{$item.transmission}"}, 
 						{if $item.engine}
