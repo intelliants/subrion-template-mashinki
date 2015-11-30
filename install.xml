@@ -158,6 +158,7 @@
 		<phrase category="frontend" key="register">Sign up</phrase>
 		<phrase category="frontend" key="mashinki">Mashinki</phrase>
 		<phrase category="frontend" key="mashinki_sell">Sell a car</phrase>
+		<phrase category="frontend" key="see_all_favorites">See all Favorites</phrase>
 		<phrase category="frontend" key="mashinki_new">New</phrase>
 		<phrase category="frontend" key="mashinki_used">Used</phrase>
 		<phrase category="frontend" key="copyright_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At error veniam, reprehenderit eligendi odio neque.</phrase>
