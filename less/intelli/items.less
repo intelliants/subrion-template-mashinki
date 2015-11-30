@@ -265,11 +265,15 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.45);
       margin: 0;
       padding: 20px;
       font-size: 14px;
       line-height: 16px;
+      font-weight: bold;
+      background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 
       a {
         color: #fff;
@@ -304,6 +308,12 @@
     .b-car-card__img img {
       .scale(1.1);
     }
+  }
+
+  &--simple {
+    .box-shadow(none);
+
+    background: #f0f0f0;
   }
 }
 
@@ -428,9 +438,10 @@
     &__spec {
       width: 80%;
       color: lighten(@text-color, 13%);
+      font-size: 12px;
 
       td.second-column {
-        padding-left: 40px;
+        padding-left: 20px;
       }
 
       td {
@@ -537,4 +548,80 @@
   + .tabbable {
     margin-top: @gap;
   }
+}
+
+
+
+//
+// Featured items
+// --------------------------------------------------
+
+.ia-item.-with-bg {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  border-radius: @border-radius-base;
+
+  .ia-item__image {
+    border-radius: @border-radius-base;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    max-width: none;
+    margin: 0;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 300px !important;
+      max-width: none;
+      height: 300px;
+      top: 50%;
+      left: 50%;
+      margin-top: -150px;
+      margin-left: -150px;
+      .transition(all .1s ease-in-out);
+    }
+  }
+
+  .ia-item__content {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-radius: @border-radius-base;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    .transition(all .2s ease);
+
+    &:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    a {
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    p {
+      color: fade(#fff, 70%);
+    }
+  }
+
+  .ia-item__price {
+    font-weight: bold;
+    color: @brand-success !important;
+    margin: 0;
+  }
+
 }

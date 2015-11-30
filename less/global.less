@@ -39,6 +39,22 @@ body {
 // }
 
 
+// Drops
+
+.dropdown-menu {
+
+  > li {
+
+    > a {
+
+      > .fa {
+        width: 18px;
+        text-align: center;
+      }
+    }
+  }
+}
+
 
 //
 // Content
@@ -82,10 +98,6 @@ body {
   }
 }
 
-.page-header {
-  margin-top: 0;
-}
-
 .verytop {
   .box {
     margin: 0;
@@ -93,7 +105,7 @@ body {
 }
 
 .content {
-  padding: @vertical-rhythm*2 0;
+  padding: @vertical-rhythm 0;
   background: #fff;
 
   &__header {
@@ -105,6 +117,9 @@ body {
     h1 {
       float: left;
       .font-normalize(28px, 0);
+      font-weight: bold;
+      color: @brand-dark;
+      text-transform: uppercase;
     }
   }
 
@@ -136,6 +151,10 @@ body {
     + .box {
       margin-top: @vertical-rhythm*2;
     }
+  }
+
+  &__wrap {
+    margin-bottom: @vertical-rhythm;
   }
 }
 

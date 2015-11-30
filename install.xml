@@ -4,8 +4,8 @@
 	<summary>Special template for Subrion Autos extension</summary>
 	<author>Gleb Surinov</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>1.0.0</version>
-	<date>2015-10-21</date>
+	<version>3.4.0</version>
+	<date>2015-11-30</date>
 	<compatibility>4.0</compatibility>
 
 	<dependency type="package" exist="1">autos</dependency>
@@ -80,34 +80,34 @@
 		    order="3030">Social links</config>
 	
 	<config group="template_mashinki"
-			name="mashinki_social"
+			name="website_social"
 		    type="radio" 
 		    order="3031"
 		    values="1,0" 
 		    description="Show links in footer">1</config>
 	<config group="template_mashinki"
-			name="mashinki_social_t"
+			name="website_social_t"
 		    type="text"
 		    order="3032"
-		    show="mashinki_social|1" 
+		    show="website_social|1" 
 		    description="Twitter Link">https://twitter.com/IntelliantsLLC</config>
 	<config group="template_mashinki"
-			name="mashinki_social_f"
+			name="website_social_f"
 		    type="text" 
 		    order="3033" 
-		    show="mashinki_social|1" 
+		    show="website_social|1" 
 		    description="Facebook Link">https://www.facebook.com/Intelliants</config>
 	<config group="template_mashinki"
-			name="mashinki_social_g"
+			name="website_social_g"
 		    type="text" 
 		    order="3034" 
-		    show="mashinki_social|1" 
+		    show="website_social|1" 
 		    description="Google+ Link">https://plus.google.com/102500660503219569194/posts</config>
 	<config group="template_mashinki"
-			name="mashinki_social_i"
+			name="website_social_i"
 		    type="text" 
 		    order="3035" 
-		    show="mashinki_social|1" 
+		    show="website_social|1" 
 		    description="LinkedIn Link">#</config>
 
 	<config group="template_mashinki" 
@@ -117,20 +117,21 @@
 		    order="3099">ckeditor.css</config>
 
 	<changeset>
-		<menu position="account" status="active">account</menu>
+		<menu position="account">account</menu>
 		<menu position="footer_menu1" status="active" header="1">bottom</menu>
 		<menu position="footer_menu2" status="active" header="1">inventory</menu>
 
-		<block position="verytop" sticky="1" header="0" collapsible="0" status="active" order="-1">autos_search</block>
-		<block position="right" header="0" pages="index,autos_index" status="active" order="-1">auto_featured</block>
-		<block position="verytop" header="0" status="active" sticky="0" pages="index">auto_sponsored</block>
-		<block position="bottom" collapsible="0" header="0" status="active" order="-1">auto_recent</block>
-		<block position="bottom" collapsible="0" header="0" classname="box--border" status="active" order="-1">auto_random</block>
+		<block position="verytop" sticky="1" header="0" collapsible="0" order="-1">autos_search</block>
+		<block position="right" status="active" header="0" pages="index,autos_index" order="-1">auto_featured</block>
+		<block position="verytop" status="active" header="0" sticky="0" pages="index">auto_sponsored</block>
+		<block position="bottom" status="active" collapsible="0" header="0" order="-1" sticky="0" pages="index">auto_recent</block>
+		<block position="verybottom" collapsible="0" header="0" classname="" order="-1">auto_random</block>
 		<block status="inactive">common_statistics</block>
-		<block position="right" order="2" status="active">auto_body_list</block>
-		<block position="right" status="active">auto_year_list</block>
-		<block position="right" status="active" order="-1" header="0" classname="box-clear" collapsible="0" sticky="0" pages="autos_view">autos_author</block>
-		<block position="right" status="active" order="199" sticky="0" pages="autos_view">item_actions</block>
+		<block position="right" order="2" classname="box--border">auto_body_list</block>
+		<block position="right">auto_year_list</block>
+		<block position="right" order="-1" header="0" classname="box-clear" collapsible="0" sticky="0" pages="autos_view">autos_author</block>
+		<block position="right" order="199" sticky="0" pages="autos_view">item_actions</block>
+		<block status="active" position="right" pages="search,search_autos,autos_index" classname="box--border">filters</block>
 	</changeset>
 
 	<blocks>

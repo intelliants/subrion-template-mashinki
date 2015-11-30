@@ -3,7 +3,7 @@
 	<div class="ia-item-view__info">
 		{if $item.sponsored}<span class="ia-item-view__info__item"><span class="label label-warning">{lang key='sponsored'}</span></span>{/if}
 		{if $item.featured}<span class="ia-item-view__info__item"><span class="label label-info">{lang key='featured'}</span></span>{/if}
-		<span class="ia-item-view__info__item">{lang key='field_auto_type'}: <a href="{$packages.autos.url}condition/{$item.auto_type}/"><b>{lang key="field_auto_type_{$item.auto_type}"}</b></a></span>
+		<span class="ia-item-view__info__item">{lang key='field_condition'}: <a href="{$searchPageUrl}condition:{$item.condition}/"><b>{lang key="field_condition_{$item.condition}"}</b></a></span>
 		{if $item.mileage}<span class="ia-item-view__info__item">{lang key='field_mileage'}: <b>{$item.mileage}</b></span>{/if}
 		<span class="ia-item-view__info__item"><span class="fa fa-eye"></span> {$item.views_num}</b></span>
 		<span class="ia-item-view__info__item"><span class="fa fa-calendar"></span> {lang key='added_on'} {$item.date_added|date_format:$core.config.date_format}</b></span>
@@ -38,15 +38,15 @@
 						</tr>
 						<tr>
 							<td>{lang key='field_release_year'}</td>
-							<td><a href="{$packages.autos.url}year/{$item.release_year}/">{$item.release_year}</a></td>
+							<td>{$item.release_year}</td>
 						</tr>
 						<tr>
 							<td>{lang key='field_price'}</td>
 							<td><span class="text-success">{$item.price}</span></td>
 						</tr>
 						<tr>
-							<td>{lang key='field_auto_type'}</td>
-							<td><a href="{$packages.autos.url}condition/{$item.auto_type}/">{lang key="field_auto_type_{$item.auto_type}"}</a></td>
+							<td>{lang key='field_condition'}</td>
+							<td><a href="{$searchPageUrl}condition:{$item.condition}/">{lang key="field_condition_{$item.condition}"}</a></td>
 						</tr>
 						{if $item.mileage}
 							<tr>
@@ -92,7 +92,7 @@
 					<tbody>
 						<tr>
 							<td>{lang key='field_body_type'}</td>
-							<td><a href="{$packages.autos.url}body-style/{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a></td>
+							<td><a href="{$smarty.const.IA_URL}search/cars/body:{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a></td>
 						</tr>
 						{if $item.exterior_color}
 							<tr>
@@ -173,7 +173,7 @@
 
 	{ia_hooker name='smartyItemViewBeforeTabs'}
 
-	{include file='item-view-tabs.tpl' isView=true exceptions=array('model', 'price', 'release_year', 'auto_type', 'mileage', 'engine', 'engine_type', 'engine_size', 'horse_power', 'transmission', 'auto_pictures', 'fuel_type', 'body_type', 'exterior_color', 'door_count', 'metallic', 'interior_color', 'interior_leather', 'drive_type', 'vin_code', 'additional_info', 'options_features') class='ia-item-view-tabs'}
+	{include file='item-view-tabs.tpl' isView=true exceptions=array('model', 'price', 'release_year', 'condition', 'mileage', 'engine', 'engine_type', 'engine_size', 'horse_power', 'transmission', 'auto_pictures', 'fuel_type', 'body_type', 'exterior_color', 'door_count', 'metallic', 'interior_color', 'interior_leather', 'drive_type', 'vin_code', 'additional_info', 'options_features') class='ia-item-view-tabs'}
 
 	{ia_hooker name='smartyViewListingBeforeFooter'}
 </div>

@@ -124,16 +124,16 @@
 							{$_content_}
 
 							{ia_hooker name='smartyFrontAfterMainContent'}
-
-							{ia_blocks block='bottom'}
-
-							{if isset($iaBlocks.user1) || isset($iaBlocks.user2)}
-								<div class="row">
-									<div class="{width section='user-blocks' position='user1' tag='col-md-'}">{ia_blocks block='user1'}</div>
-									<div class="{width section='user-blocks' position='user2' tag='col-md-'}">{ia_blocks block='user2'}</div>
-								</div>
-							{/if}
 						</div>
+
+						{ia_blocks block='bottom'}
+
+						{if isset($iaBlocks.user1) || isset($iaBlocks.user2)}
+							<div class="row">
+								<div class="{width section='user-blocks' position='user1' tag='col-md-'}">{ia_blocks block='user1'}</div>
+								<div class="{width section='user-blocks' position='user2' tag='col-md-'}">{ia_blocks block='user2'}</div>
+							</div>
+						{/if}
 					</div>
 					<div class="{width section='content' position='right' tag='col-md-'} aside">
 						{ia_blocks block='right'}
@@ -175,12 +175,12 @@
 						{ia_blocks block='footer_menu2'}
 					</div>
 					<div class="col-md-5">
-						{if $core.config.mashinki_social}
+						{if $core.config.website_social}
 							<ul class="social">
-								{if $core.config.mashinki_social_t}<li><a href="{$core.config.mashinki_social_t}" class="twitter"><span class="fa fa-twitter-square"></span></a></li>{/if}
-								{if $core.config.mashinki_social_f}<li><a href="{$core.config.mashinki_social_f}" class="facebook"><span class="fa fa-facebook-square"></span></a></li>{/if}
-								{if $core.config.mashinki_social_g}<li><a href="{$core.config.mashinki_social_g}" class="google-plus"><span class="fa fa-google-plus-square"></span></a></li>{/if}
-								{if $core.config.mashinki_social_i}<li><a href="{$core.config.mashinki_social_i}" class="linkedin"><span class="fa fa-linkedin-square"></span></a></li>{/if}
+								{if $core.config.website_social_t}<li><a href="{$core.config.website_social_t}" class="twitter"><span class="fa fa-twitter-square"></span></a></li>{/if}
+								{if $core.config.website_social_f}<li><a href="{$core.config.website_social_f}" class="facebook"><span class="fa fa-facebook-square"></span></a></li>{/if}
+								{if $core.config.website_social_g}<li><a href="{$core.config.website_social_g}" class="google-plus"><span class="fa fa-google-plus-square"></span></a></li>{/if}
+								{if $core.config.website_social_i}<li><a href="{$core.config.website_social_i}" class="linkedin"><span class="fa fa-linkedin-square"></span></a></li>{/if}
 							</ul>
 						{/if}
 					</div>

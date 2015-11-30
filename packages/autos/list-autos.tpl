@@ -35,15 +35,19 @@
 			<tbody>
 				<tr>
 					<td>{lang key='field_condition'}:</td>
-					<td><b><a href="{ia_url item='autos' data=$listing type='url'}">{lang key="field_auto_type_{$listing.condition}"}</a></b></td>
+					<td><b><a href="{ia_url item='autos' data=$listing type='url'}">{lang key="field_condition_{$listing.condition}"}</a></b></td>
 					<td class="second-column">{lang key='field_transmission'}:</td>
 					<td><b>{lang key="field_transmission_{$listing.transmission}"}</b></td>
 				</tr>
 				<tr>
 					<td>{lang key='field_body_type'}:</td>
 					<td><b><a href="{ia_url item='autos' data=$listing type='url'}">{lang key="field_body_type_{$listing.body_type}"}</b></a></td>
-					<td class="second-column">{lang key='field_drive_type'}:</td>
-					<td><b>{lang key="field_drive_type_{$listing.drive_type}"}</b></td>
+					<td class="second-column">{lang key='field_engine'}:</td>
+					<td><b>
+						{if $listing.engine}
+							<a class="ia-car-info__icon ia-car-info__icon--engine" href="{$listing.link}">{lang key="field_engine_{$listing.engine}"}{if $listing.engine_type} {lang key="field_engine_type_{$listing.engine_type}"}{/if}{if $listing.engine_size} {$listing.engine_size}{/if}</a>
+						{/if}
+					</b></td>
 				</tr>
 				<tr>
 					<td>{lang key='field_exterior_color'}:</td>

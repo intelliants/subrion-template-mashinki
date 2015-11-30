@@ -8,7 +8,7 @@
 					</a>
 				</div>
 
-				{if $entry@iteration % 2 == 0}
+				{if $entry@iteration % 2 == 0 && !$entry@last}
 					</div>
 					<div class="row">
 				{/if}
