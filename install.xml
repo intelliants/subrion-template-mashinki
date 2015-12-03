@@ -4,8 +4,8 @@
 	<summary>Special template for Subrion Autos extension</summary>
 	<author>Gleb Surinov</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>3.4.0</version>
-	<date>2015-11-30</date>
+	<version>4.0.0</version>
+	<date>2015-12-03</date>
 	<compatibility>4.0</compatibility>
 
 	<dependency type="package" exist="1">autos</dependency>
