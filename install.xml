@@ -4,8 +4,8 @@
 	<summary>Special template for Subrion Autos extension</summary>
 	<author>Gleb Surinov</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>4.0.0</version>
-	<date>2015-12-03</date>
+	<version>4.0.1</version>
+	<date>2016-01-15</date>
 	<compatibility>4.0</compatibility>
 
 	<dependency type="package" exist="1">autos</dependency>
@@ -73,6 +73,27 @@
 		    type="text" 
 		    description="Max number of items in Main Menu"
 		    order="3004">8</config>
+
+	<config group="template_mashinki" 
+		    name="template_fotorama_car" 
+		    type="select" 
+		    multiplevalues="contain,cover,scaledown,none" 
+		    description="Fotorama fit method for cars"
+		    order="3008">cover</config>
+
+	<config group="template_mashinki" 
+		    name="template_fotorama_service" 
+		    type="select" 
+		    multiplevalues="contain,cover,scaledown,none" 
+		    description="Fotorama fit method for services"
+		    order="3009">cover</config>
+
+	<config group="template_mashinki" 
+		    name="template_fotorama_part" 
+		    type="select" 
+		    multiplevalues="contain,cover,scaledown,none" 
+		    description="Fotorama fit method for parts"
+		    order="3010">contain</config>
 
 	<config group="template_mashinki" 
 		    name="mashinki_divider2" 
