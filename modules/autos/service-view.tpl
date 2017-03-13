@@ -3,7 +3,7 @@
 		<table class="ia-item-view__table">
 			<tbody>
 				<tr>
-					<td>{lang key='field_categories'}</td>
+					<td>{lang key='field_autos_services_categories'}</td>
 					<td>
 						{$services = explode(',', $item.categories)}
 
@@ -13,65 +13,32 @@
 					</td>
 				</tr>
 				<tr>
-					<td>{lang key='field_company_address'}</td>
+					<td>{lang key='field_autos_services_company_address'}</td>
 					<td>{$item.company_address}</td>
 				</tr>
 				<tr>
-					<td>{lang key='field_company_phone'}</td>
+					<td>{lang key='field_autos_services_company_phone'}</td>
 					<td>{$item.company_phone}</td>
 				</tr>
 				{if $item.company_website}
 					<tr>
-						<td>{lang key='field_company_website'}</td>
+						<td>{lang key='field_autos_services_company_website'}</td>
 						<td>{$item.company_website|linkify}</td>
 					</tr>
 				{/if}
 				{if $item.company_skype}
 					<tr>
-						<td>{lang key='field_company_skype'}</td>
+						<td>{lang key='field_autos_services_company_skype'}</td>
 						<td><a href="call:{$item.company_skype}">{$item.company_skype}</a></td>
 					</tr>
 				{/if}
 			</tbody>
 		</table>
-
-		<div class="ia-item-view__info">
-			<div id="gm-map" class="m-t" style="height: 300px;width: 100%;"></div>
-			<script type="text/javascript">
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('gm-map'), {
-    zoom: 14,
-    center: { lat: -34.397, lng: 150.644 }
-  });
-  var geocoder = new google.maps.Geocoder();
-
-  geocodeAddress(geocoder, map);
-}
-
-function geocodeAddress(geocoder, resultsMap) {
-  var address = '{$item.company_address}';
-  geocoder.geocode({ 'address': address }, function(results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      resultsMap.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: resultsMap,
-        position: results[0].geometry.location
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
-}
-			</script>
-			<script async defer
-			        src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
-		</div>
 	</div>
 
 	<div class="col-md-7">
 		{if !empty($item.pictures)}
 			{ia_add_media files='fotorama'}
-			{$pics=unserialize($item.pictures)}
 
 			<div class="ia-item-view__gallery">
 				<div class="fotorama" 
@@ -80,8 +47,8 @@ function geocodeAddress(geocoder, resultsMap) {
 					 data-ratio="800/400"
 					 data-allowfullscreen="true"
 					 data-fit="{$core.config.template_fotorama_service}">
-					{foreach $pics as $entry}
-						<a class="ia-item-view__gallery__item" href="{printImage imgfile=$entry.path url=true fullimage=true}">{printImage imgfile=$entry.path title=$entry.title}</a>
+					{foreach $item.pictures as $entry}
+						<a class="ia-item-view__gallery__item" href="{ia_image file=$entry url=true type='original'}">{ia_image file=$entry type='original'}</a>
 					{/foreach}
 				</div>
 			</div>

@@ -8,13 +8,13 @@
 				<div class="ia-carousel__item">
 					<div class="b-car-card b-car-card--simple">
 						<div class="b-car-card__img">
-							{if $item.auto_pictures}
-								<a href="{$item.link}">{printImage imgfile=$item.auto_pictures[0]['path'] title=$item.model}</a>
+							{if $item.pictures}
+								<a href="{$item.link}">{ia_image file=$item.pictures[0] title=$item.model type='thumbnail'}</a>
 							{/if}
 							<h4><a href="{$item.link}">{$item.model}, {$item.release_year}</a></h4>
 						</div>
 						<div class="b-car-card__info">
-							<div class="b-car-card__info__price">{$item.price}</div>
+							<div class="b-car-card__info__price">{$item.price_formatted}</div>
 							<a href="{$item.link}">{lang key='more'}</a>
 						</div>
 					</div>

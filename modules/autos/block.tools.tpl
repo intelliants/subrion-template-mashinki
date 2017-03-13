@@ -13,13 +13,13 @@
 					<div class="ia-items recently-viewed-cars">
 						{foreach $car_blocks_data.recently_viewed as $entry}
 							<div class="ia-item">
-								{if isset($entry.auto_pictures[0]['path']) && $entry.auto_pictures[0]['path']}
-									<a href="{ia_url type='url' item='autos' data=$entry}" class="ia-item__image">{printImage imgfile=$entry.auto_pictures[0]['path'] title=$entry.model|strip_tags|truncate:'30' width=60}</a>
+								{if !empty($entry.pictures)}
+									<a href="{$entry.link}" class="ia-item__image">{ia_image file=$entry.pictures[0] title=$entry.model|strip_tags|truncate:'30' width=60 type='thumbnail'}</a>
 								{/if}
 
 								<div class="ia-item__content">
 									<h5 class="ia-item__title">
-										<a href="{ia_url type='url' item='autos' data=$entry}">{$entry.model|strip_tags|truncate:'30'}</a>
+										<a href="{$entry.link}">{$entry.model|strip_tags|truncate:'30'}</a>
 									</h5>
 									{if !empty($entry.price)}<p><span class="fa fa-tag"></span> {$core.config.currency} {$entry.price}</p>{/if}
 								</div>
@@ -35,13 +35,13 @@
 					<div class="ia-items saved-cars">
 						{foreach $car_blocks_data.saved_listings as $entry}
 							<div class="ia-item">
-								{if isset($entry.auto_pictures[0]['path']) && $entry.auto_pictures[0]['path']}
-									<a href="{ia_url type='url' item='autos' data=$entry}" class="ia-item__image">{printImage imgfile=$entry.auto_pictures[0]['path'] title=$entry.model|strip_tags|truncate:'30' width=60}</a>
+								{if !empty($entry.pictures)}
+									<a href="{$entry.link}" class="ia-item__image">{ia_image file=$entry.pictures[0] title=$entry.model|strip_tags|truncate:'30' width=60 type='thumbnail'}</a>
 								{/if}
 
 								<div class="ia-item__content">
 									<h5 class="ia-item__title">
-										<a href="{ia_url type='url' item='autos' data=$entry}">{$entry.model|strip_tags|truncate:'30'}</a>
+										<a href="{$entry.link}">{$entry.model|strip_tags|truncate:'30'}</a>
 									</h5>
 									{if !empty($entry.price)}<p><span class="fa fa-tag"></span> {$core.config.currency} {$entry.price}</p>{/if}
 								</div>

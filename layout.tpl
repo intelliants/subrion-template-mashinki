@@ -57,15 +57,11 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand{if !$core.config.enable_text_logo} navbar-brand--img{/if}" href="{$smarty.const.IA_URL}">
-							{if $core.config.enable_text_logo}
-								<span>{lang key='mashinki'}</span>
+						<a class="navbar-brand navbar-brand--img" href="{$smarty.const.IA_URL}">
+							{if !empty($core.config.site_logo)}
+								<img src="{$core.page.nonProtocolUrl}uploads/{$core.config.site_logo}" alt="{$core.config.site}">
 							{else}
-								{if !empty($core.config.site_logo)}
-									<img src="{$core.page.nonProtocolUrl}uploads/{$core.config.site_logo}" alt="{$core.config.site}">
-								{else}
-									<img src="{$img}logo.png" alt="{$core.config.site}">
-								{/if}
+								<img src="{$img}logo.png" alt="{$core.config.site}">
 							{/if}
 						</a>
 					</div>
@@ -155,14 +151,10 @@
 				<div class="row">
 					<div class="col-md-3">
 						<a class="brand brand--in-footer" href="{$smarty.const.IA_URL}">
-							{if $core.config.enable_text_logo}
-								<span>{lang key='mashinki'}</span>
+							{if !empty($core.config.site_logo)}
+								<img src="{$core.page.nonProtocolUrl}uploads/{$core.config.site_logo}" alt="{$core.config.site}">
 							{else}
-								{if !empty($core.config.site_logo)}
-									<img src="{$core.page.nonProtocolUrl}uploads/{$core.config.site_logo}" alt="{$core.config.site}">
-								{else}
-									<img src="{$img}logo.png" alt="{$core.config.site}">
-								{/if}
+								<img src="{$img}logo.png" alt="{$core.config.site}">
 							{/if}
 						</a>
 						<p>{lang key='copyright_text'}</p>

@@ -6,7 +6,7 @@
 	{include file='extra:autos/listing-filters'}
 {/if}
 
-{if isset($models) && $models}
+{if !empty($models)}
 	{ia_block title={lang key='autos_models'} style='fixed' id='auto_categories'}
 		<div class="ia-categories">
 			{include file='ia-categories.tpl' categories=$models item='autos_models' show_amount=true num_columns=$core.config.autos_model_columns}
@@ -14,7 +14,7 @@
 	{/ia_block}
 {/if}
 
-{if isset($listings) && $listings}
+{if !empty($listings)}
 	{if !isset($no_sorting)}
 		<div class="ia-sorting">
 			{lang key='sort_by'}:
@@ -30,7 +30,7 @@
 				<ul class="dropdown-menu">
 					<li><a href="{$smarty.const.IA_SELF}?sort=title" rel="nofollow"><span class="fa fa-font"></span> {lang key='title'}</a></li>
 					<li><a href="{$smarty.const.IA_SELF}?sort=price" rel="nofollow"><span class="fa fa-dollar"></span> {lang key='price'}</a></li>
-					<li><a href="{$smarty.const.IA_SELF}?sort=release_year" rel="nofollow"><span class="fa fa-calendar"></span> {lang key='field_release_year'}</a></li>
+					<li><a href="{$smarty.const.IA_SELF}?sort=release_year" rel="nofollow"><span class="fa fa-calendar"></span> {lang key='field_autos_release_year'}</a></li>
 					<li><a href="{$smarty.const.IA_SELF}?sort=date" rel="nofollow"><span class="fa fa-clock-o"></span> {lang key='date'}</a></li>
 				</ul>
 			</div>

@@ -256,13 +256,10 @@
 
     img {
       position: absolute;
-      width: 270px !important;
       max-width: none;
-      height: 270px;
       top: 50%;
       left: 50%;
-      margin-top: -135px;
-      margin-left: -135px;
+      .translate(-50%,-50%);
       .transition(all .1s ease-in-out);
     }
     
@@ -309,13 +306,6 @@
     }
   }
 
-  &:hover {
-
-    .b-car-card__img img {
-      .scale(1.1);
-    }
-  }
-
   &--simple {
     .box-shadow(none);
 
@@ -331,8 +321,9 @@
 
   &__img {
     position: absolute;
-    left: 0;
-    top: -60px;
+    left: 50%;
+    top: 50%;
+    .translate(-50%,-50%);
     z-index: 1;
     text-decoration: none;
   }
@@ -383,7 +374,7 @@
 
   &__img {
     float: left;
-    width: 150px;
+    width: 200px;
     position: relative;
 
     &--no-preview {

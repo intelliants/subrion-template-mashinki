@@ -6,7 +6,7 @@
 					<div class="b-selects">
 						<div class="b-selects__item">
 							<select name="condition" id="as_condition">
-								<option value="">{lang key='field_condition'}</option>
+								<option value="">{lang key='field_autos_condition'}</option>
 								<option value="new"{if isset($smarty.get.condition) && 'new' == $smarty.get.condition} selected{/if}>{lang key='mashinki_new'}</option>
 								<option value="used"{if isset($smarty.get.condition) && 'used' == $smarty.get.condition} selected{/if}>{lang key='mashinki_used'}</option>
 							</select>
