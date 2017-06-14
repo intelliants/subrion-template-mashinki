@@ -1,195 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <module type="template" name="mashinki">
-	<title>Mashinki</title>
-	<summary>Special template for Subrion Autos script</summary>
-	<author>Gleb Surinov</author>
-	<contributor>Intelliants LLC</contributor>
-	<version>4.1.0</version>
-	<date>2017-03-13</date>
-	<compatibility>4.1</compatibility>
+    <title>Mashinki</title>
+    <summary>Special template for Subrion Autos script</summary>
+    <author>Gleb Surinov</author>
+    <contributor>Intelliants LLC</contributor>
+    <version>4.1.1</version>
+    <date>2017-06-14</date>
+    <compatibility>4.1.4</compatibility>
 
-	<dependency type="package" exist="1">autos</dependency>
+    <dependency type="package" exist="1">autos</dependency>
 
-	<layout>
-		<position menu="1" movable="0">account</position>
-		<position menu="1" movable="0">mainmenu</position>
+    <layout>
+        <position menu="1" movable="0">account</position>
+        <position menu="1" movable="0">mainmenu</position>
 
-		<position movable="0">header</position>
-		<position>verytop</position>
-		<position>top</position>
-		<position>bottom</position>
-		<position>verybottom</position>
-		<position>footer_menu1</position>
-		<position>footer_menu2</position>
+        <position movable="0">header</position>
+        <position>verytop</position>
+        <position>top</position>
+        <position>bottom</position>
+        <position>verybottom</position>
+        <position>footer_menu1</position>
+        <position>footer_menu2</position>
 
-		<section name="content">
-			<position width="9">center</position>
-			<position fixed="1">right</position>
-		</section>
-		<section name="user-blocks">
-			<position width="6">user1</position>
-			<position width="6">user2</position>
-		</section>
-		<section name="footer">
-			<position width="4">footer1</position>
-			<position width="4">footer2</position>
-			<position width="4">footer3</position>
-		</section>
-	</layout>
+        <section name="content">
+            <position width="9">center</position>
+            <position fixed="1">right</position>
+        </section>
+        <section name="user-blocks">
+            <position width="6">user1</position>
+            <position width="6">user2</position>
+        </section>
+        <section name="footer">
+            <position width="4">footer1</position>
+            <position width="4">footer2</position>
+            <position width="4">footer3</position>
+        </section>
+    </layout>
 
-	<screenshots>
-		<screenshot name="1.jpg"><![CDATA[Frontend -> Home Page]]></screenshot>
-		<screenshot name="2.jpg"><![CDATA[Frontend -> Blog]]></screenshot>
-	</screenshots>
+    <screenshots>
+        <screenshot name="1.jpg"><![CDATA[Frontend -> Home Page]]></screenshot>
+        <screenshot name="2.jpg"><![CDATA[Frontend -> Blog]]></screenshot>
+    </screenshots>
 
-	<configgroup name="template_mashinki">Template</configgroup>
+    <configgroup name="template_mashinki">Template</configgroup>
 
-	<config group="template_mashinki"
-		    name="mashinki_divider1"
-		    type="divider"
-		    order="3000">General</config>
+    <config group="template_mashinki"
+            name="mashinki_divider1"
+            type="divider"
+            order="3000">General</config>
 
-	<config group="template_mashinki"
-		    name="website_bg"
-		    type="image"
-		    description="Header background"
-		    order="3002"><![CDATA[]]></config>
+    <config group="template_mashinki"
+            name="website_bg"
+            type="image"
+            description="Header background"
+            order="3002"><![CDATA[]]></config>
 
-	<config group="template_mashinki"
-		    name="website_footer_bg"
-		    type="image"
-		    description="Footer background"
-		    order="3003"><![CDATA[]]></config>
+    <config group="template_mashinki"
+            name="website_footer_bg"
+            type="image"
+            description="Footer background"
+            order="3003"><![CDATA[]]></config>
 
-	<config group="template_mashinki"
-		    name="max_top_menu_items"
-		    type="text"
-		    description="Max number of items in Main Menu"
-		    order="3004">8</config>
+    <config group="template_mashinki"
+            name="max_top_menu_items"
+            type="text"
+            description="Max number of items in Main Menu"
+            order="3004">8</config>
 
-	<config group="template_mashinki"
-		    name="template_fotorama_car"
-		    type="select"
-		    values="contain,cover,scaledown,none"
-		    description="Fotorama fit method for cars"
-		    order="3008">cover</config>
+    <config group="template_mashinki"
+            name="template_fotorama_car"
+            type="select"
+            values="contain,cover,scaledown,none"
+            description="Fotorama fit method for cars"
+            order="3008">cover</config>
 
-	<config group="template_mashinki"
-		    name="template_fotorama_service"
-		    type="select"
-		    values="contain,cover,scaledown,none"
-		    description="Fotorama fit method for services"
-		    order="3009">cover</config>
+    <config group="template_mashinki"
+            name="template_fotorama_service"
+            type="select"
+            values="contain,cover,scaledown,none"
+            description="Fotorama fit method for services"
+            order="3009">cover</config>
 
-	<config group="template_mashinki"
-		    name="template_fotorama_part"
-		    type="select"
-		    values="contain,cover,scaledown,none"
-		    description="Fotorama fit method for parts"
-		    order="3010">contain</config>
+    <config group="template_mashinki"
+            name="template_fotorama_part"
+            type="select"
+            values="contain,cover,scaledown,none"
+            description="Fotorama fit method for parts"
+            order="3010">contain</config>
 
-	<config group="template_mashinki"
-		    name="mashinki_divider2"
-		    type="divider"
-		    order="3030">Social links</config>
+    <config group="template_mashinki"
+            name="mashinki_divider2"
+            type="divider"
+            order="3030">Social links</config>
 
-	<config group="template_mashinki"
-			name="website_social"
-		    type="radio"
-		    order="3031"
-		    values="1,0"
-		    description="Show links in footer">1</config>
-	<config group="template_mashinki"
-			name="website_social_t"
-		    type="text"
-		    order="3032"
-		    show="website_social|1"
-		    description="Twitter Link">https://twitter.com/IntelliantsLLC</config>
-	<config group="template_mashinki"
-			name="website_social_f"
-		    type="text"
-		    order="3033"
-		    show="website_social|1"
-		    description="Facebook Link">https://www.facebook.com/Intelliants</config>
-	<config group="template_mashinki"
-			name="website_social_g"
-		    type="text"
-		    order="3034"
-		    show="website_social|1"
-		    description="Google+ Link">https://plus.google.com/102500660503219569194/posts</config>
-	<config group="template_mashinki"
-			name="website_social_i"
-		    type="text"
-		    order="3035"
-		    show="website_social|1"
-		    description="LinkedIn Link">#</config>
+    <config group="template_mashinki"
+            name="website_social"
+            type="radio"
+            order="3031"
+            values="1,0"
+            description="Show links in footer">1</config>
+    <config group="template_mashinki"
+            name="website_social_t"
+            type="text"
+            order="3032"
+            show="website_social|1"
+            description="Twitter Link">https://twitter.com/IntelliantsLLC</config>
+    <config group="template_mashinki"
+            name="website_social_f"
+            type="text"
+            order="3033"
+            show="website_social|1"
+            description="Facebook Link">https://www.facebook.com/Intelliants</config>
+    <config group="template_mashinki"
+            name="website_social_g"
+            type="text"
+            order="3034"
+            show="website_social|1"
+            description="Google+ Link">https://plus.google.com/102500660503219569194/posts</config>
+    <config group="template_mashinki"
+            name="website_social_i"
+            type="text"
+            order="3035"
+            show="website_social|1"
+            description="LinkedIn Link">#</config>
 
-	<config group="template_mashinki"
-		    name="ckeditor_css"
-		    type="hidden"
-		    description="CKEditor CSS"
-		    order="3099">ckeditor.css</config>
+    <config group="template_mashinki"
+            name="ckeditor_css"
+            type="hidden"
+            description="CKEditor CSS"
+            order="3099">ckeditor.css</config>
 
-	<changeset>
-		<menu position="account" status="active">account</menu>
-		<menu position="footer_menu1" status="active" header="1">bottom</menu>
-		<menu position="footer_menu2" status="active" header="1">inventory</menu>
+    <changeset>
+        <menu position="account" status="active">account</menu>
+        <menu position="footer_menu1" status="active" header="1">bottom</menu>
+        <menu position="footer_menu2" status="active" header="1">inventory</menu>
 
-		<block position="verytop" status="active" sticky="1" header="0" collapsible="0" order="-1">autos_search</block>
-		<block position="right" status="active" header="0" pages="index,autos_index" order="-1">auto_featured</block>
-		<block position="right" status="active">autos_tools</block>
-		<block position="verytop" status="active" header="0" sticky="0" pages="index">auto_sponsored</block>
-		<block position="bottom" status="active" collapsible="0" header="0" order="-1" sticky="0" pages="index">auto_recent</block>
-		<block position="verybottom" status="active" collapsible="0" header="0" classname="" order="-1">auto_random</block>
-		<block position="right" status="active" order="2" classname="box--border">auto_body_list</block>
-		<block position="right" status="active">auto_year_list</block>
-		<block position="right" status="active" order="-1" header="0" classname="box-clear" collapsible="0" sticky="0" pages="autos_view">autos_author</block>
-		<block position="right" status="active" order="199" sticky="0" pages="autos_view">item_actions</block>
-		<block position="right" status="active" pages="search,search_autos,autos_index" classname="box--border">filters</block>
+        <block position="verytop" status="active" sticky="1" header="0" collapsible="0" order="-1">autos_search</block>
+        <block position="right" status="active" header="0" pages="index,autos_index" order="-1">auto_featured</block>
+        <block position="right" status="active">autos_tools</block>
+        <block position="verytop" status="active" header="0" sticky="0" pages="index">auto_sponsored</block>
+        <block position="bottom" status="active" collapsible="0" header="0" order="-1" sticky="0" pages="index">auto_recent</block>
+        <block position="verybottom" status="active" collapsible="0" header="0" classname="" order="-1">auto_random</block>
+        <block position="right" status="active" order="2" classname="box--border">auto_body_list</block>
+        <block position="right" status="active">auto_year_list</block>
+        <block position="right" status="active" order="-1" header="0" classname="box-clear" collapsible="0" sticky="0" pages="autos_view">autos_author</block>
+        <block position="right" status="active" order="199" sticky="0" pages="autos_view">item_actions</block>
+        <block position="right" status="active" pages="search,search_autos,autos_index" classname="box--border">filters</block>
 
-		<block status="inactive">common_statistics</block>
-	</changeset>
+        <block status="inactive">common_statistics</block>
+    </changeset>
 
-	<blocks>
-		<block name="header"
-			   title="Header block"
-			   position="header"
-			   header="0"
-			   collapsible="0"
-			   sticky="0"
-			   pages="index"
-			   status="active"
-			   type="smarty">
-			<![CDATA[
+    <blocks>
+        <block name="header"
+               title="Header block"
+               position="header"
+               header="0"
+               collapsible="0"
+               sticky="0"
+               pages="index"
+               status="active"
+               type="smarty">
+            <![CDATA[
 <div class="h-block">
-	<div class="h-block__title">Find thousands of cars for sale</div>
-	<div class="h-block__subtitle">and other related ads</div>
+    <div class="h-block__title">Find thousands of cars for sale</div>
+    <div class="h-block__subtitle">and other related ads</div>
 </div>
-			]]>
-		</block>
-	</blocks>
+            ]]>
+        </block>
+    </blocks>
 
-	<phrases>
-		<phrase category="frontend" key="login">Log in</phrase>
-		<phrase category="frontend" key="register">Sign up</phrase>
-		<phrase category="frontend" key="mashinki">Mashinki</phrase>
-		<phrase category="frontend" key="mashinki_sell">Sell a car</phrase>
-		<phrase category="frontend" key="see_all_favorites">See all Favorites</phrase>
-		<phrase category="frontend" key="mashinki_new">New</phrase>
-		<phrase category="frontend" key="mashinki_used">Used</phrase>
-		<phrase category="frontend" key="copyright_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At error veniam, reprehenderit eligendi odio neque.</phrase>
-		<phrase category="frontend" key="car_features">Car features</phrase>
-		<phrase category="frontend" key="contact_seller">Contact seller</phrase>
-		<phrase category="frontend" key="added_on">Added on</phrase>
-		<phrase category="frontend" key="sponsored_for_sale">
-			<![CDATA[
+    <phrases>
+        <phrase category="frontend" key="login">Log in</phrase>
+        <phrase category="frontend" key="register">Sign up</phrase>
+        <phrase category="frontend" key="mashinki">Mashinki</phrase>
+        <phrase category="frontend" key="mashinki_sell">Sell a car</phrase>
+        <phrase category="frontend" key="see_all_favorites">See all Favorites</phrase>
+        <phrase category="frontend" key="mashinki_new">New</phrase>
+        <phrase category="frontend" key="mashinki_used">Used</phrase>
+        <phrase category="frontend" key="copyright_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At error veniam, reprehenderit eligendi odio neque.</phrase>
+        <phrase category="frontend" key="car_features">Car features</phrase>
+        <phrase category="frontend" key="contact_seller">Contact seller</phrase>
+        <phrase category="frontend" key="added_on">Added on</phrase>
+        <phrase category="frontend" key="sponsored_for_sale">
+            <![CDATA[
 <span>Sponsored</span> cars for sale
-			]]>
-		</phrase>
-		<phrase category="frontend" key="latest_for_sale">
-			<![CDATA[
+            ]]>
+        </phrase>
+        <phrase category="frontend" key="latest_for_sale">
+            <![CDATA[
 <span>latest</span> cars for sale
-			]]>
-		</phrase>
-	</phrases>
+            ]]>
+        </phrase>
+    </phrases>
 </module>
